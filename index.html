@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BryanTech - CCTV y Redes</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Loader -->
+    <div class="loader">
+      <div class="spinner"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav>
+      <h1>BryanTech</h1>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="inicio">
+  <div class="bg3"></div> <!-- tercera imagen del fondo -->
+  <div class="hero-text">
+    <h1>Instalación de CCTV y Redes Profesionales</h1>
+    <p>
+      Asesorías, cableado estructurado y sistemas eléctricos de baja tensión
+      con calidad y seguridad.
+    </p>
+    <a href="#contacto" class="btn">Contáctame</a>
+  </div>
+</section>
+
+
+    <!-- Servicios -->
+ <section id="servicios" class="services-section">
+  <h2>Nuestros Servicios</h2>
+
+  <div class="services-grid">
+    <div class="service-card">
+      <h3>Instalación de CCTV</h3>
+      <p>Protege tu hogar o empresa con sistemas de videovigilancia de alta calidad.</p>
+      <a href="cctv.html" target="_blank" class="btn-servicio">Ver más</a>
+    </div>
+
+    <div class="service-card">
+      <h3>Electricidad y Cableado</h3>
+      <p>Soluciones eléctricas seguras y profesionales adaptadas a tus necesidades.</p>
+      <a href="electricidad.html" target="_blank" class="btn-servicio">Ver más</a>
+    </div>
+
+    <div class="service-card">
+      <h3>Mantenimiento Técnico</h3>
+      <p>Garantizamos la continuidad de tus sistemas con soporte técnico especializado.</p>
+      <a href="mantenimiento.html" target="_blank" class="btn-servicio">Ver más</a>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Contacto -->
+    <section id="contacto" class="contact-section">
+      <h2>Contáctame</h2>
+      <p>¿Necesitas una cotización o más información? Envíame un mensaje.</p>
+      <form class="contact-form" id="contactForm">
+        <div class="form-group">
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required />
+        </div>
+        <div class="form-group">
+          <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje" required></textarea>
+        </div>
+        <button type="submit" class="btn">Enviar mensaje</button>
+        <p class="form-status" id="formStatus"></p>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© <span>BryanTech</span> 2025 — Todos los derechos reservados</p>
+    </footer>
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+      emailjs.init("HEof-Hy52uJQ_l_3S"); // Tu public key correcta
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("contactForm");
+        const statusText = document.getElementById("formStatus");
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          statusText.textContent = "Enviando mensaje...";
+
+          emailjs.send("service_9qb7icl", "template_kisi506", {
+            from_name: form.nombre.value,
+            from_email: form.email.value,
+            message: form.mensaje.value,
+          })
+          .then(() => {
+            statusText.textContent = "✅ ¡Mensaje enviado correctamente!";
+            form.reset();
+          })
+          .catch((error) => {
+            console.error("Error de EmailJS:", error);
+            statusText.textContent = "❌ Error al enviar el mensaje. Revisa tu configuración.";
+          });
+        });
+      });
+    </script>
+
+    <!-- Script principal -->
+    <script src="script.js"></script>
+  </body>
+</html>
