@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Electricidad | Empresa Tecnológica</title>
+
+  <style>
+    /* --- Estilo general --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: "Poppins", sans-serif;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    /* --- Fondo con transición de imágenes --- */
+    .background-slideshow {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .background-slideshow img {
+      position: absolute;
+      width: 110%;
+      height: 110%;
+      object-fit: cover;
+      opacity: 0;
+      transform: scale(0.9);
+      transition: opacity 1.5s ease-in-out, transform 3s ease-in-out;
+      filter: brightness(0.7) contrast(1.1);
+    }
+
+    .background-slideshow img.active {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* --- Contenido principal --- */
+    .content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 30px;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 20px;
+      display: inline-block;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+    }
+
+    .content h1 {
+      font-size: 2.5em;
+      margin-bottom: 15px;
+      color: #00e5ff;
+      text-shadow: 0 0 10px #00e5ff;
+    }
+
+    .content p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      color: #e0e0e0;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .btn-volver {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 25px;
+      background: linear-gradient(90deg, #00e5ff, #0081cb);
+      border: none;
+      color: #fff;
+      border-radius: 50px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .btn-volver:hover {
+      background: linear-gradient(90deg, #0081cb, #00e5ff);
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(0, 229, 255, 0.5);
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Fondo animado -->
+  <div class="background-slideshow">
+    <img src="https://www.plaremesa.net/wp-content/uploads/2024/03/1-1.jpg" class="active" alt="Electricidad 1" />
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmAsmJbmr_-PcH10dO6ns6AplW8sPOY957ew&s" alt="Electricidad 2" />
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThxo2mym0yr5Wy7nkT6KJbBGhFJrUAWFIOIw&s" alt="Electricidad 3" />
+    <img src="https://aprende.com/wp-content/uploads/2020/08/como-iniciar-inicia-la-instalacion-940x580.jpg" alt="Electricidad 4" />
+  </div>
+
+  <!-- Contenido -->
+  <div class="content">
+    <h1>Servicios Eléctricos Profesionales</h1>
+    <p>
+      Nuestro equipo de expertos garantiza instalaciones eléctricas seguras, eficientes y modernas.
+      Utilizamos tecnología avanzada y materiales certificados para asegurar el máximo rendimiento
+      y durabilidad en cada proyecto.
+    </p>
+    <a href="index.html" class="btn-volver">Volver al Inicio</a>
+  </div>
+
+  <!-- --- Script para el cambio automático de imágenes --- -->
+  <script>
+    const slides = document.querySelectorAll(".background-slideshow img");
+    let current = 0;
+
+    setInterval(() => {
+      slides[current].classList.remove("active");
+      current = (current + 1) % slides.length;
+      slides[current].classList.add("active");
+    }, 4000); // cada 4 segundos cambia con efecto de zoom suave
+  </script>
+<!-- Botón flotante de WhatsApp -->
+<a href="https://wa.me/573012050415?text=Hola%20BryanTech,%20deseo%20más%20información%20sobre%20sus%20servicios" 
+   class="whatsapp-float" 
+   target="_blank" 
+   aria-label="Chatear por WhatsApp">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp" />
+</a>
+
+<style>
+  .whatsapp-float {
+    position: fixed;
+    width: 65px;
+    height: 65px;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25d366;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(37, 211, 102, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    animation: pulse 2s infinite;
+  }
+
+  .whatsapp-float img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(37, 211, 102, 0.8);
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+    }
+    70% {
+      transform: scale(1.05);
+      box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+  }
+</style>
+
+</body>
+</html>
+
