@@ -91,3 +91,15 @@ window.addEventListener("load", () => {
 });
 
 
+// Mostrar el popup al cargar la página
+window.onload = function() {
+  setTimeout(() => {
+    document.getElementById('promo-popup').style.display = 'flex';
+  }, 800);
+};
+
+// Cerrar el popup
+function closePopup() {
+  document.getElementById('promo-popup').style.display = 'none';
+}
+
