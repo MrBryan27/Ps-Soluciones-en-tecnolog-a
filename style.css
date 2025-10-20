@@ -15,7 +15,7 @@
 }
 
 .logo img {
-  height: 5px; /* ajusta el tamaño a tu gusto */
+  height: 55px; /* ajusta el tamaño a tu gusto */
   width: auto;
   transition: transform 0.3s ease, filter 0.3s ease;
 }
@@ -712,5 +712,6 @@ footer span {
       box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
     }
   }
+
 
 
