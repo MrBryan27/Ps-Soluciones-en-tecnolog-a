@@ -725,6 +725,7 @@ footer span {
   background-color: rgba(0, 0, 0, 0.75);
   justify-content: center;
   align-items: center;
+  animation: fadein 0.5s ease;
 }
 
 /* Contenedor reducido */

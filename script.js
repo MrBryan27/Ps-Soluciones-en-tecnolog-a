@@ -90,16 +90,19 @@ window.addEventListener("load", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-
-// Mostrar el popup al cargar la página
+// Mostrar ambos popups al cargar la página
 window.onload = function() {
   setTimeout(() => {
     document.getElementById('promo-popup').style.display = 'flex';
-  }, 800);
+  }, 1500);
+
+  setTimeout(() => {
+    document.getElementById('service-popup').style.display = 'flex';
+  }, 800); // Aparece un poco después del primero
 };
 
 // Cerrar el popup
-function closePopup() {
-  document.getElementById('promo-popup').style.display = 'none';
-}
+function closePopup(id) {
+  document.getElementById(id).style.display = 'none';
 
+  }
