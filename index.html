@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BryanTech - CCTV y Redes</title>
+    <title>Ps Soluciones en tecnologia</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -16,8 +16,8 @@
     <nav>
       <!-- Sustituir el título por el logo -->
         <a href="index.html" class="logo">
-          <img src="logo-ps.png" alt="PS Soluciones en Tecnología" class="logo" />
-       </a>
+          <img src="/img/logo-ps.png" alt="PS Soluciones en Tecnología" />
+      </a>
 
       <ul>
         <li><a href="#inicio">Inicio</a></li>
@@ -39,9 +39,7 @@
   </div>
 </section>
 
-
-    <!-- Servicios -->
- <!-- Servicios -->
+<!-- Servicios -->
 <section id="servicios">
   <h2>Servicios</h2>
   <div class="services">
@@ -76,6 +74,28 @@
         Vigilancia continua de sistemas de seguridad electrónica y apoyo a la
         seguridad física. Monitoreamos en tiempo real para garantizar una 
         respuesta inmediata ante cualquier evento.
+      </p>
+    </div>
+
+    
+      <div class="service" onclick="window.location.href='Sellos.html'">
+      <h3>Sellos Satelital</h3>
+      <p>
+        Asegura el control total de tu carga y flota con nuestro servicio 
+        de sellos satelitales. Monitorea en tiempo real la ubicación, apertura
+        y estado de tus activos, garantizando trazabilidad, seguridad y 
+        eficiencia en cada envío.
+      </p>
+    </div>
+
+      <div class="service" onclick="window.location.href='drones.html'">
+      <h3>Sobre vuelos con Drones</h3>
+      <p>
+        Explora nuevas perspectivas con nuestro servicio de drones.
+        Realizamos inspecciones, vigilancia y monitoreo aéreo con 
+        tecnología de alta precisión, brindándote imágenes y datos 
+        en tiempo real para optimizar tus proyectos y garantizar la
+        seguridad en cada operación.
       </p>
     </div>
 
@@ -141,29 +161,31 @@
     <script src="script.js"></script>
 <!-- Botón flotante de WhatsApp -->
 <a href="https://wa.me/573014913791?text=Hola%20BryanTech,%20deseo%20más%20información%20sobre%20sus%20servicios" 
-   class="whatsapp-float" 
-   target="_blank" 
-   aria-label="Chatear por WhatsApp">
+  class="whatsapp-float" 
+  target="_blank" 
+  aria-label="Chatear por WhatsApp">
   <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp" />
 </a>
 
+
+
 <div id="promo-popup" class="popup">
   <div class="popup-content">
-    <span class="close-btn" onclick="closePopup()">✖</span>
+    <span class="close-btn" onclick="closePopup('promo-popup')">✖</span>
     <a href="https://wa.me/573014913791?text=Hola!%20Estoy%20interesado%20en%20el%20combo%20de%20seguridad%20que%20vi%20en%20su%20página." target="_blank">
-      <img src="combo1.png" alt="Promoción de seguridad" class="popup-image">
+      <img src="img/promocion-combo1.png" alt="Promoción de seguridad" class="popup-image">
     </a>
-    <button class="close-button" onclick="closePopup()">Cerrar promoción</button>
+    <button class="close-button" onclick="closePopup('promo-popup')">Cerrar promoción</button>
+  </div>
+</div>
+
+<div id="service-popup" class="popup">
+  <div class="popup-content">
+    <span class="close-btn" onclick="closePopup('service-popup')">✖</span>
+      <img src="img/flasher-drones.png" alt="Nuevos_Sevicios" class="popup-image">
+      <button class="close-button" onclick="closePopup('service-popup')">Cerrar</button>
   </div>
 </div>
 
   </body>
 </html>
-
-
-
-
-
-
-
-
